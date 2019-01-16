@@ -7,6 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>PongJS</title>
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html{
+            font-size: 10px;
+        }
+
         body{
             background-color: #000;
             height: 100vh;
@@ -15,14 +25,68 @@
             align-items: center;
         }
 
-        canvas{
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: stretch;
             border: 2px solid red;
+        }
+
+        .container .table{
+            color: white;
+            display: flex;
+            flex-direction: row;
+            height: 100px;
+        }
+
+        .container .table span{
+            display: inline-block;
+            flex-basis: 10%;
+            text-align: center;
+            font-size: 3em;
+            line-height: 100px;
+        }
+
+        .container .table h1{
+            flex-basis: 80%;
+            text-align: center;
+            font-size: 3em;
+            font-weight: bold;
+            line-height: 100px;
+        }
+
+        .container canvas{
+            border: 2px solid red;
+        }
+
+        .container .menu{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container .menu button.reset{
+            font-size: 2em;
+            margin: 5px 0;
         }
     </style>
 </head>
 
 <body>
-    <canvas></canvas>
+    <div class="container">
+        <div class="table">
+            <span class="playerPoints">0</span>
+            <h1>Welcome to PongJS</h1>
+            <span class="computerPoints">0</span>
+        </div>
+        <canvas></canvas>
+        <div class="menu">
+            <button class="reset">Reset Game!</button>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 
