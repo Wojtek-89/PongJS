@@ -1,5 +1,5 @@
 {
-    "name": "Pong",
+    "name": "pong",
     "version": "0.0.1",
     "main": "electronStart.js",
     "dependencies": {
